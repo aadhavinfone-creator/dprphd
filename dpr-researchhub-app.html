@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DPR ResearchHub | Academic Conferences &amp; Publication Directory</title>
+<meta name="description" content="Discover academic conferences, research workshops, Scopus and Web of Science listings, submission deadlines, and publication opportunities worldwide.">
+<link rel="canonical" href="https://www.dprresearchhub.example/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DPR ResearchHub | Academic Conferences & Publication Directory">
+<meta property="og:description" content="Discover academic conferences, research workshops, Scopus and Web of Science listings, submission deadlines, and publication opportunities worldwide.">
+<meta property="og:url" content="https://www.dprresearchhub.example/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DPR ResearchHub | Academic Conferences & Publication Directory">
+<meta name="twitter:description" content="Discover academic conferences, research workshops, Scopus and Web of Science listings, submission deadlines, and publication opportunities worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { navy:'#0F172A', navysoft:'#1E293B', accent:'#2563EB', accentdark:'#1D4ED8' },
+        fontFamily: { serif:['"Source Serif 4"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] }
+      }
+    }
+  }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DPR ResearchHub",
+  "url": "https://www.dprresearchhub.example/",
+  "description": "A directory for academic conferences, research workshops, and publication alerts."
+}
+</script>
+<style>
+  html{ scroll-behavior:smooth; }
+  body{ background:#F8FAFC; }
+  :focus-visible{ outline:2px solid #2563EB; outline-offset:2px; border-radius:4px; }
+  .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .modal-backdrop{ background:rgba(15,23,42,.6); }
+  [data-panel]{ transition: transform .2s ease, opacity .2s ease; }
+  .status-indexed{ background:#EFF6FF; color:#1D4ED8; }
+  .status-cfp{ background:#FFF7ED; color:#B45309; }
+  .status-upcoming{ background:#F0FDF4; color:#15803D; }
+  .status-soon{ background:#FEF2F2; color:#B91C1C; }
+</style>
+</head>
+<body class="font-sans text-slate-900 antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow">Skip to main content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="sticky top-0 z-40 bg-[#F8FAFC]/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-5 md:px-6 h-[76px] flex items-center justify-between gap-6">
+    <a href="#home" class="flex items-center gap-2.5 shrink-0">
+      <div class="w-9 h-9 rounded-lg bg-navy text-white flex items-center justify-center font-serif font-bold text-[17px]" aria-hidden="true">DR</div>
+      <div class="leading-tight">
+        <div class="font-serif font-bold text-[19px] text-navy">DPR ResearchHub</div>
+        <div class="text-[11px] text-slate-500 font-medium">Conference &amp; publication directory</div>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7" aria-label="Primary">
+      <a href="#home" class="nav-link text-[14.5px] font-medium text-slate-500 hover:text-navy border-b-2 border-transparent pb-1.5 transition">Home</a>
+      <a href="#conferences" class="nav-link text-[14.5px] font-medium text-slate-500 hover:text-navy border-b-2 border-transparent pb-1.5 transition">Upcoming Conferences</a>
+      <a href="#indexing" class="nav-link text-[14.5px] font-medium text-slate-500 hover:text-navy border-b-2 border-transparent pb-1.5 transition">Scopus &amp; Web of Science</a>
+      <a href="#submit" class="nav-link text-[14.5px] font-medium text-slate-500 hover:text-navy border-b-2 border-transparent pb-1.5 transition">Submit Event</a>
+      <a href="#contact" class="nav-link text-[14.5px] font-medium text-slate-500 hover:text-navy border-b-2 border-transparent pb-1.5 transition">Contact Us</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="headerSearchBtn" class="hidden md:flex items-center gap-2 border border-slate-300 rounded-lg px-3.5 py-2 text-sm text-slate-500 hover:border-accent hover:text-accent transition" aria-label="Jump to conference search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </button>
+      <a href="#submit" class="hidden lg:inline-block bg-accent hover:bg-accentdark text-white font-semibold text-sm px-4.5 py-2.5 rounded-lg transition">Submit Event</a>
+      <button id="mobileToggle" class="lg:hidden p-1.5 text-navy" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg id="iconMenu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="iconClose" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobileNav" class="hidden lg:hidden border-t border-slate-200 px-5 pb-4" aria-label="Mobile">
+    <a href="#home" class="nav-link block py-2.5 text-[15px] font-medium text-navy border-b border-slate-200">Home</a>
+    <a href="#conferences" class="nav-link block py-2.5 text-[15px] font-medium text-navy border-b border-slate-200">Upcoming Conferences</a>
+    <a href="#indexing" class="nav-link block py-2.5 text-[15px] font-medium text-navy border-b border-slate-200">Scopus &amp; Web of Science</a>
+    <a href="#submit" class="nav-link block py-2.5 text-[15px] font-medium text-navy border-b border-slate-200">Submit Event</a>
+    <a href="#contact" class="nav-link block py-2.5 text-[15px] font-medium text-navy">Contact Us</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="relative bg-navy text-white overflow-hidden">
+  <div class="absolute inset-0 opacity-30" aria-hidden="true" style="background-image:linear-gradient(#1E293B 1px, transparent 1px), linear-gradient(90deg, #1E293B 1px, transparent 1px); background-size:64px 64px; mask-image:radial-gradient(ellipse 70% 60% at 25% 0%, black 40%, transparent 90%);"></div>
+
+  <div class="relative max-w-6xl mx-auto px-5 md:px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+    <div class="max-w-2xl">
+      <div class="flex items-center gap-2 text-[13.5px] font-medium text-blue-300 mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-400" aria-hidden="true"></span>
+        3,400+ Scopus &amp; Web of Science indexed listings tracked across our partner sources
+      </div>
+      <h1 class="font-serif font-semibold text-[32px] md:text-[44px] leading-[1.15] mb-5 max-w-xl">Find the right conference before the deadline finds you.</h1>
+      <p class="text-[17px] leading-relaxed text-slate-300 max-w-lg mb-10">DPR ResearchHub tracks academic conferences, workshops, and journal calls worldwide — indexing, submission deadlines, and publication routes, updated daily.</p>
+    </div>
+
+    <!-- Search / Filter Card -->
+    <form id="searchForm" class="bg-white rounded-2xl p-5 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_auto] gap-3 max-w-4xl" role="search" aria-label="Conference search">
+      <div class="flex flex-col gap-1.5">
+        <label for="f-keyword" class="text-[11.5px] font-semibold text-slate-500">Topic or keyword</label>
+        <input id="f-keyword" name="keyword" type="text" placeholder="e.g. Artificial Intelligence" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm bg-slate-50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent w-full">
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="f-month" class="text-[11.5px] font-semibold text-slate-500">Month</label>
+        <select id="f-month" name="month" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm bg-slate-50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent w-full">
+          <option value="">Any month</option>
+          <option value="2026-09">September 2026</option>
+          <option value="2026-10">October 2026</option>
+          <option value="2026-11">November 2026</option>
+          <option value="2026-12">December 2026</option>
+          <option value="2027-01">January 2027</option>
+          <option value="2027-02">February 2027</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="f-country" class="text-[11.5px] font-semibold text-slate-500">Country</label>
+        <select id="f-country" name="country" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm bg-slate-50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent w-full">
+          <option value="">Any country</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="f-city" class="text-[11.5px] font-semibold text-slate-500">City</label>
+        <input id="f-city" name="city" type="text" placeholder="e.g. Singapore" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm bg-slate-50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent w-full">
+      </div>
+      <button type="submit" class="bg-accent hover:bg-accentdark text-white font-semibold text-sm rounded-lg px-6 py-2.5 flex items-center justify-center gap-2 transition sm:col-span-2 lg:col-span-1 self-end">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </button>
+    </form>
+
+    <div class="flex flex-wrap gap-9 mt-9">
+      <div><div class="font-serif font-semibold text-[26px]">6</div><div class="text-[12.5px] text-slate-400 mt-0.5">Active listings (demo dataset)</div></div>
+      <div><div class="font-serif font-semibold text-[26px]">5</div><div class="text-[12.5px] text-slate-400 mt-0.5">Countries covered (demo dataset)</div></div>
+      <div><div class="font-serif font-semibold text-[26px]">96</div><div class="text-[12.5px] text-slate-400 mt-0.5">Countries in target coverage</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== UPCOMING CONFERENCES ===================== -->
+<section id="conferences" class="py-14 md:py-16" aria-labelledby="conf-heading">
+  <div class="max-w-6xl mx-auto px-5 md:px-6">
+    <div class="flex justify-between items-end gap-5 flex-wrap mb-7">
+      <div>
+        <h2 id="conf-heading" class="font-serif font-semibold text-[26px] md:text-[28px] text-navy mb-1.5">Upcoming conferences</h2>
+        <p class="text-[14.5px] text-slate-500 max-w-md">Browse indexed listings by month, or use the search above to narrow by topic and location.</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <label for="sortBy" class="text-[13px] font-medium text-slate-500">Sort by</label>
+        <select id="sortBy" class="border border-slate-200 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-accent">
+          <option value="soonest">Soonest conference</option>
+          <option value="deadline">Nearest deadline</option>
+          <option value="newest">Newest listing</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Month Filter Tabs -->
+    <div id="monthTabs" class="flex gap-2.5 overflow-x-auto pb-1.5 mb-6" role="tablist" aria-label="Filter by month"></div>
+
+    <!-- Result count / clear filters -->
+    <div class="flex items-center justify-between flex-wrap gap-3 mb-5">
+      <p id="resultCount" class="text-[13.5px] text-slate-500" role="status" aria-live="polite">Showing 6 conferences</p>
+      <button id="clearFilters" class="text-[13px] font-semibold text-accent hover:text-accentdark hidden">Clear all filters</button>
+    </div>
+
+    <!-- Conference Cards -->
+    <div id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+
+    <!-- Empty state -->
+    <div id="emptyState" class="hidden text-center py-16 border border-dashed border-slate-300 rounded-xl">
+      <p class="font-serif text-[20px] text-navy mb-1.5">No conferences found</p>
+      <p class="text-[14px] text-slate-500">Try changing your search filters.</p>
+    </div>
+
+    <div class="text-center mt-9">
+      <button id="loadMoreBtn" class="border border-slate-300 bg-white hover:border-accent hover:text-accent text-navy font-semibold text-sm px-6 py-2.5 rounded-lg transition">Load more conferences</button>
+      <p id="allLoadedMsg" class="hidden text-[13.5px] text-slate-500 mt-3">All conferences loaded.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SCOPUS / WOS INDEXING ===================== -->
+<section id="indexing" class="py-14 md:py-16 bg-white border-y border-slate-200" aria-labelledby="indexing-heading">
+  <div class="max-w-6xl mx-auto px-5 md:px-6">
+    <h2 id="indexing-heading" class="font-serif font-semibold text-[26px] md:text-[28px] text-navy mb-2">Scopus &amp; Web of Science conference listings</h2>
+    <p class="text-[14.5px] text-slate-500 max-w-2xl mb-9">A short, general overview of what these indexes mean and how conference publications typically move toward them.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+      <div class="border border-slate-200 rounded-xl p-6">
+        <h3 class="font-semibold text-[16px] text-navy mb-2">Scopus</h3>
+        <p class="text-[13.5px] text-slate-600 leading-relaxed">Scopus is a large abstract and citation database of peer-reviewed literature maintained by Elsevier. Conference proceedings are sometimes submitted by organizers for evaluation and inclusion, but inclusion is decided independently by Scopus, not by any listing service.</p>
+      </div>
+      <div class="border border-slate-200 rounded-xl p-6">
+        <h3 class="font-semibold text-[16px] text-navy mb-2">Web of Science</h3>
+        <p class="text-[13.5px] text-slate-600 leading-relaxed">Web of Science, maintained by Clarivate, is another major citation index covering journals and select conference proceedings. Coverage decisions are made by Clarivate's editorial process and can change over time.</p>
+      </div>
+      <div class="border border-slate-200 rounded-xl p-6">
+        <h3 class="font-semibold text-[16px] text-navy mb-2">Publication routes</h3>
+        <p class="text-[13.5px] text-slate-600 leading-relaxed">Accepted papers may be published through conference proceedings, invited journal publication, or special issues, depending on the individual event's arrangements with its publisher.</p>
+      </div>
+    </div>
+
+    <div class="bg-amber-50 border border-amber-200 text-amber-900 text-[13.5px] rounded-xl p-4 leading-relaxed">
+      <strong>Indexing verification:</strong> Indexing and publication information may be provided by event organizers or available sources. Researchers should independently verify current Scopus/Web of Science coverage and publication arrangements before submitting papers or making payments. Always confirm directly through the relevant indexing database before submitting or paying conference fees.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="py-14 md:py-16" aria-labelledby="about-heading">
+  <div class="max-w-6xl mx-auto px-5 md:px-6 max-w-3xl">
+    <h2 id="about-heading" class="font-serif font-semibold text-[26px] md:text-[28px] text-navy mb-3">About DPR ResearchHub</h2>
+    <p class="text-[14.5px] text-slate-600 leading-relaxed">DPR ResearchHub is a conference and publication directory designed to help researchers discover academic conferences, workshops, symposiums, and publication opportunities across disciplines and locations. The platform is under active development; listings shown today are a small demo dataset used to preview the directory experience.</p>
+  </div>
+</section>
+
+<!-- ===================== SUBMIT EVENT ===================== -->
+<section id="submit" class="py-14 md:py-16 bg-white border-y border-slate-200" aria-labelledby="submit-heading">
+  <div class="max-w-6xl mx-auto px-5 md:px-6">
+    <div class="max-w-2xl mb-8">
+      <h2 id="submit-heading" class="font-serif font-semibold text-[26px] md:text-[28px] text-navy mb-2">Submit your event</h2>
+      <p class="text-[14.5px] text-slate-500">Organizers can share event details for review. <strong class="text-navy">Demo mode — submission is not yet connected to a backend.</strong></p>
+    </div>
+
+    <form id="submitForm" class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl" novalidate>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-organizerName" class="text-[13px] font-medium text-slate-700">Organizer name <span class="text-red-600">*</span></label>
+        <input id="s-organizerName" required type="text" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-organization" class="text-[13px] font-medium text-slate-700">Organization</label>
+        <input id="s-organization" type="text" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-email" class="text-[13px] font-medium text-slate-700">Email <span class="text-red-600">*</span></label>
+        <input id="s-email" required type="email" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-phone" class="text-[13px] font-medium text-slate-700">Phone</label>
+        <input id="s-phone" type="tel" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+      </div>
+      <div class="flex flex-col gap-1.5 md:col-span-2">
+        <label for="s-title" class="text-[13px] font-medium text-slate-700">Conference title <span class="text-red-600">*</span></label>
+        <input id="s-title" required type="text" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5 md:col-span-2">
+        <label for="s-website" class="text-[13px] font-medium text-slate-700">Conference website</label>
+        <input id="s-website" type="url" placeholder="https://" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-start" class="text-[13px] font-medium text-slate-700">Start date <span class="text-red-600">*</span></label>
+        <input id="s-start" required type="date" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-end" class="text-[13px] font-medium text-slate-700">End date</label>
+        <input id="s-end" type="date" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-country" class="text-[13px] font-medium text-slate-700">Country <span class="text-red-600">*</span></label>
+        <input id="s-country" required type="text" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-city" class="text-[13px] font-medium text-slate-700">City <span class="text-red-600">*</span></label>
+        <input id="s-city" required type="text" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5 md:col-span-2">
+        <label for="s-description" class="text-[13px] font-medium text-slate-700">Conference description</label>
+        <textarea id="s-description" rows="3" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+      </div>
+      <div class="flex flex-col gap-1.5 md:col-span-2">
+        <label for="s-topics" class="text-[13px] font-medium text-slate-700">Topics (comma separated)</label>
+        <input id="s-topics" type="text" placeholder="e.g. Machine Learning, Robotics" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-deadline" class="text-[13px] font-medium text-slate-700">Submission deadline</label>
+        <input id="s-deadline" type="date" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="s-indexing" class="text-[13px] font-medium text-slate-700">Indexing information</label>
+        <input id="s-indexing" type="text" placeholder="e.g. Submitted for Scopus review" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+      </div>
+      <div class="flex flex-col gap-1.5 md:col-span-2">
+        <label for="s-publication" class="text-[13px] font-medium text-slate-700">Publication information</label>
+        <input id="s-publication" type="text" placeholder="e.g. Proceedings, special issue, etc." class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+      </div>
+
+      <div class="md:col-span-2 flex items-center gap-4 flex-wrap pt-1">
+        <button type="submit" class="bg-accent hover:bg-accentdark text-white font-semibold text-sm px-6 py-2.5 rounded-lg transition">Submit Event</button>
+        <p id="submitSuccess" class="hidden text-[13.5px] text-green-700" role="status">Thank you. Your event has been submitted for review. <span class="text-slate-500">Demo mode — submission is not yet connected to a backend.</span></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== ADVERTISE ===================== -->
+<section id="advertise" class="py-14 md:py-16" aria-labelledby="advertise-heading">
+  <div class="max-w-6xl mx-auto px-5 md:px-6">
+    <div class="bg-navy text-white rounded-2xl p-8 md:p-10 flex flex-wrap items-center justify-between gap-6">
+      <div class="max-w-xl">
+        <h2 id="advertise-heading" class="font-serif font-semibold text-[24px] md:text-[26px] mb-2">Reach the research community</h2>
+        <p class="text-[14.5px] text-slate-300">Conference organizers, publishers, academic institutions, and research-focused organizations can explore promotional opportunities on DPR ResearchHub.</p>
+      </div>
+      <a href="#contact" class="bg-accent hover:bg-accentdark text-white font-semibold text-sm px-6 py-2.5 rounded-lg transition whitespace-nowrap">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="py-14 md:py-16 bg-white border-t border-slate-200" aria-labelledby="contact-heading">
+  <div class="max-w-6xl mx-auto px-5 md:px-6 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10">
+    <div>
+      <h2 id="contact-heading" class="font-serif font-semibold text-[26px] md:text-[28px] text-navy mb-3">Contact us</h2>
+      <p class="text-[14.5px] text-slate-500 mb-6 max-w-sm">Questions about a listing, a submission, or advertising? Reach us directly, or use the form.</p>
+      <div class="space-y-3">
+        <a href="mailto:wedoyourwork0@gmail.com" class="flex items-center gap-2.5 text-[14px] text-slate-700 hover:text-accent">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
+          wedoyourwork0@gmail.com
+        </a>
+        <a href="tel:+919087433080" class="flex items-center gap-2.5 text-[14px] text-slate-700 hover:text-accent">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 90874 33080
+        </a>
+      </div>
+    </div>
+
+    <form id="contactForm" class="grid grid-cols-1 sm:grid-cols-2 gap-5" novalidate>
+      <div class="flex flex-col gap-1.5">
+        <label for="c-name" class="text-[13px] font-medium text-slate-700">Name <span class="text-red-600">*</span></label>
+        <input id="c-name" required type="text" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="c-email" class="text-[13px] font-medium text-slate-700">Email <span class="text-red-600">*</span></label>
+        <input id="c-email" required type="email" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5 sm:col-span-2">
+        <label for="c-subject" class="text-[13px] font-medium text-slate-700">Subject <span class="text-red-600">*</span></label>
+        <input id="c-subject" required type="text" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="flex flex-col gap-1.5 sm:col-span-2">
+        <label for="c-message" class="text-[13px] font-medium text-slate-700">Message <span class="text-red-600">*</span></label>
+        <textarea id="c-message" required rows="4" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+        <span class="field-error text-[12px] text-red-600 hidden"></span>
+      </div>
+      <div class="sm:col-span-2 flex items-center gap-4 flex-wrap">
+        <button type="submit" class="bg-accent hover:bg-accentdark text-white font-semibold text-sm px-6 py-2.5 rounded-lg transition">Send Message</button>
+        <p id="contactSuccess" class="hidden text-[13.5px] text-green-700" role="status">Your message has been prepared successfully. <span class="text-slate-500">Backend email delivery will be connected in the production version.</span></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<section class="py-14 md:py-16">
+  <div class="max-w-6xl mx-auto px-5 md:px-6">
+    <div class="bg-navy text-white rounded-2xl px-6 py-10 md:px-10 md:py-12 flex flex-wrap items-center justify-between gap-8">
+      <div>
+        <h2 class="font-serif font-semibold text-[24px] md:text-[26px] mb-2">Never miss a conference again</h2>
+        <p class="text-[14.5px] text-slate-400 max-w-sm">Get a weekly digest of new listings matched to your field, plus early alerts on submission deadlines.</p>
+      </div>
+      <form id="newsletterForm" class="flex flex-wrap gap-2.5 flex-1 max-w-md" novalidate>
+        <label for="nl-email" class="sr-only">Email address</label>
+        <input id="nl-email" type="email" required placeholder="you@university.edu" class="flex-1 min-w-[200px] px-3.5 py-3 rounded-lg border border-slate-700 bg-slate-900 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+        <button type="submit" class="bg-accent hover:bg-accentdark text-white font-semibold text-sm px-5.5 py-3 rounded-lg whitespace-nowrap transition">Subscribe now</button>
+      </form>
+    </div>
+    <p id="newsletterSuccess" class="hidden text-[13.5px] text-green-700 mt-3" role="status">You're subscribed! Watch your inbox for the next research digest. <span class="text-slate-500">Demo mode — no email service connected yet.</span></p>
+    <p id="newsletterError" class="hidden text-[13.5px] text-red-600 mt-3" role="alert">Please enter a valid email address.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-navy text-slate-300 pt-14 pb-7">
+  <div class="max-w-6xl mx-auto px-5 md:px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-8 pb-11 border-b border-slate-700/60">
+      <div>
+        <div class="font-serif font-bold text-white text-[18px]">DPR ResearchHub</div>
+        <p class="text-[13.5px] leading-relaxed text-slate-400 mt-3.5 max-w-xs">The global directory for academic conferences, research workshops, and publication alerts — updated daily across every discipline.</p>
+        <div class="mt-5 space-y-2">
+          <a href="mailto:wedoyourwork0@gmail.com" class="flex items-center gap-2 text-[13.5px] text-slate-400 hover:text-white">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
+            wedoyourwork0@gmail.com
+          </a>
+          <a href="tel:+919087433080" class="flex items-center gap-2 text-[13.5px] text-slate-400 hover:text-white">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +91 90874 33080
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-[13px] font-semibold text-white mb-4">Top Countries</h3>
+        <ul id="footerCountries" class="space-y-0"></ul>
+      </div>
+      <div>
+        <h3 class="text-[13px] font-semibold text-white mb-4">Top Cities</h3>
+        <ul id="footerCities" class="space-y-0"></ul>
+      </div>
+      <div>
+        <h3 class="text-[13px] font-semibold text-white mb-4">Popular Topics</h3>
+        <ul id="footerTopics" class="space-y-0"></ul>
+      </div>
+      <div>
+        <h3 class="text-[13px] font-semibold text-white mb-4">Company</h3>
+        <a href="#about" class="block text-[13.5px] text-slate-400 hover:text-white py-1.5">About Us</a>
+        <a href="#submit" class="block text-[13.5px] text-slate-400 hover:text-white py-1.5">Submit an Event</a>
+        <a href="#advertise" class="block text-[13.5px] text-slate-400 hover:text-white py-1.5">Advertise</a>
+        <a href="mailto:wedoyourwork0@gmail.com" class="block text-[13.5px] text-slate-400 hover:text-white py-1.5">Contact Us</a>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between gap-3 pt-6 text-[12.5px] text-slate-500">
+      <span>© 2026 DPR ResearchHub. All rights reserved.</span>
+      <span><a href="#" class="hover:text-white">Privacy Policy</a> · <a href="#" class="hover:text-white">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== DETAIL MODAL ===================== -->
+<div id="modalBackdrop" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4" role="presentation">
+  <div id="modalPanel" data-panel class="bg-white rounded-2xl max-w-xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-8 relative" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button id="modalClose" class="absolute top-4 right-4 p-1.5 text-slate-400 hover:text-navy rounded-lg" aria-label="Close dialog">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- 1. DATA LAYER (future API-ready) ---------------- */
+  const conferences = [
+    {
+      id: "icair-2026",
+      date: "2026-09-19",
+      title: "International Conference on Artificial Intelligence & Robotics (ICAIR 2026)",
+      city: "Singapore",
+      country: "Singapore",
+      status: "Indexed Listing",
+      topics: ["AI & Robotics", "Machine Learning"],
+      deadline: "2026-09-01",
+      indexing: ["Scopus"],
+      description: "A multidisciplinary gathering for researchers working in artificial intelligence, robotics, and applied machine learning, featuring paper sessions and poster tracks.",
+      organizer: "Not provided",
+      website: null,
+      publication: "Conference proceedings",
+      importantDates: [
+        { label: "Abstract Submission", date: "2026-09-01" },
+        { label: "Full Paper Submission", date: "2026-09-15" },
+        { label: "Conference", date: "2026-09-19" }
+      ]
+    },
+    {
+      id: "world-congress-renewable-energy",
+      date: "2026-09-23",
+      title: "World Congress on Renewable Energy & Sustainability",
+      city: "Berlin",
+      country: "Germany",
+      status: "Call for Papers",
+      topics: ["Engineering", "Environmental Science"],
+      deadline: "2026-09-05",
+      indexing: ["Verify with organizer"],
+      description: "A congress bringing together engineers and environmental scientists to discuss renewable energy systems, sustainability policy, and applied case studies.",
+      organizer: "Not provided",
+      website: null,
+      publication: "Verify with organizer",
+      importantDates: [
+        { label: "Abstract Submission", date: "2026-09-05" },
+        { label: "Conference", date: "2026-09-23" }
+      ]
+    },
+    {
+      id: "asia-pacific-social-sciences",
+      date: "2026-09-27",
+      title: "Asia-Pacific Symposium on Social Sciences & Humanities",
+      city: "Kyoto",
+      country: "Japan",
+      status: "Indexed Listing",
+      topics: ["Social Sciences", "Education"],
+      deadline: "2026-09-10",
+      indexing: ["Scopus"],
+      description: "A regional symposium covering social sciences, humanities, and education research with an emphasis on cross-cultural studies.",
+      organizer: "Not provided",
+      website: null,
+      publication: "Conference proceedings",
+      importantDates: [
+        { label: "Abstract Submission", date: "2026-09-10" },
+        { label: "Conference", date: "2026-09-27" }
+      ]
+    },
+    {
+      id: "biomedical-engineering-healthcare",
+      date: "2026-10-02",
+      title: "International Conference on Biomedical Engineering & Healthcare",
+      city: "Toronto",
+      country: "Canada",
+      status: "Call for Papers",
+      topics: ["Biomedical", "Healthcare"],
+      deadline: "2026-09-15",
+      indexing: ["Verify with organizer"],
+      description: "Covers advances in biomedical engineering, clinical technology, and healthcare delivery research, with tracks for early-career researchers.",
+      organizer: "Not provided",
+      website: null,
+      publication: "Verify with organizer",
+      importantDates: [
+        { label: "Abstract Submission", date: "2026-09-15" },
+        { label: "Conference", date: "2026-10-02" }
+      ]
+    },
+    {
+      id: "business-analytics-finance",
+      date: "2026-10-08",
+      title: "Global Summit on Business Analytics & Finance",
+      city: "London",
+      country: "United Kingdom",
+      status: "Indexed Listing",
+      topics: ["Business", "Finance"],
+      deadline: "2026-09-20",
+      indexing: ["Web of Science"],
+      description: "A summit for researchers and practitioners in business analytics, quantitative finance, and data-driven decision-making.",
+      organizer: "Not provided",
+      website: null,
+      publication: "Journal publication",
+      importantDates: [
+        { label: "Abstract Submission", date: "2026-09-20" },
+        { label: "Conference", date: "2026-10-08" }
+      ]
+    },
+    {
+      id: "structural-civil-engineering",
+      date: "2026-10-14",
+      title: "International Conference on Structural & Civil Engineering",
+      city: "Dubai",
+      country: "United Arab Emirates",
+      status: "Call for Papers",
+      topics: ["Civil Engineering", "Architecture"],
+      deadline: "2026-09-22",
+      indexing: ["Verify with organizer"],
+      description: "Focused on structural design, civil infrastructure, and architectural engineering research from academic and industry contributors.",
+      organizer: "Not provided",
+      website: null,
+      publication: "Verify with organizer",
+      importantDates: [
+        { label: "Abstract Submission", date: "2026-09-22" },
+        { label: "Conference", date: "2026-10-14" }
+      ]
+    }
+  ];
+
+  /* ---------------- Service abstraction (future API swap point) ---------------- */
+  async function getConferences(){
+    // Currently return local demo data.
+    // Later: return fetch('/api/conferences').then(r => r.json());
+    return conferences;
+  }
+
+  /* ---------------- Utilities ---------------- */
+  const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+  const $$ = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
+  const escapeHtml = (str) => String(str == null ? "" : str).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+  const fmtDate = (iso) => {
+    if(!iso) return "Not provided";
+    const d = new Date(iso + "T00:00:00");
+    if (isNaN(d)) return "Not provided";
+    return d.toLocaleDateString(undefined, { day:"numeric", month:"long", year:"numeric" });
+  };
+  const dayBadge = (iso) => {
+    const d = new Date(iso + "T00:00:00");
+    return { day: String(d.getDate()).padStart(2,"0"), mon: d.toLocaleDateString(undefined,{month:"short"}).toUpperCase() };
+  };
+  const daysUntil = (iso) => {
+    const today = new Date(); today.setHours(0,0,0,0);
+    const target = new Date(iso + "T00:00:00");
+    return Math.round((target - today) / 86400000);
+  };
+  const monthKey = (iso) => iso.slice(0,7);
+  const statusClass = (status) => {
+    if (status === "Indexed Listing") return "status-indexed";
+    if (status === "Call for Papers") return "status-cfp";
+    if (status === "Deadline Soon") return "status-soon";
+    return "status-upcoming";
+  };
+  const isValidEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const isValidUrl = (v) => { try { new URL(v); return true; } catch(e){ return false; } };
+
+  /* ---------------- State ---------------- */
+  let allConferences = [];
+  let filtered = [];
+  let visibleCount = 6;
+  const PAGE_SIZE = 6;
+  let activeMonth = "";
+  let sortMode = "soonest";
+
+  const monthLabels = [
+    { key:"", label:"All" },
+    { key:"2026-09", label:"Sep 2026" },
+    { key:"2026-10", label:"Oct 2026" },
+    { key:"2026-11", label:"Nov 2026" },
+    { key:"2026-12", label:"Dec 2026" },
+    { key:"2027-01", label:"Jan 2027" },
+    { key:"2027-02", label:"Feb 2027" }
+  ];
+
+  /* ---------------- Render: month tabs ---------------- */
+  function renderMonthTabs(){
+    const wrap = $("#monthTabs");
+    wrap.innerHTML = "";
+    monthLabels.forEach(m => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.setAttribute("role","tab");
+      btn.setAttribute("aria-selected", String(m.key === activeMonth));
+      btn.className = "filter-pill shrink-0 px-4.5 py-2 rounded-full text-[13.5px] font-medium border transition whitespace-nowrap " +
+        (m.key === activeMonth ? "bg-navy text-white border-navy" : "bg-white text-slate-500 border-slate-200 hover:border-accent hover:text-accent");
+      btn.textContent = m.label;
+      btn.addEventListener("click", () => {
+        activeMonth = m.key;
+        $("#f-month").value = m.key;
+        visibleCount = PAGE_SIZE;
+        applyFilters();
+      });
+      wrap.appendChild(btn);
+    });
+  }
+
+  /* ---------------- Render: country dropdown (dynamic) ---------------- */
+  function populateCountryDropdown(){
+    const select = $("#f-country");
+    const countries = Array.from(new Set(allConferences.map(c => c.country))).sort();
+    countries.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c; opt.textContent = c;
+      select.appendChild(opt);
+    });
+  }
+
+  /* ---------------- Render: footer link lists (dynamic) ---------------- */
+  function renderFooterLists(){
+    const countries = Array.from(new Set(allConferences.map(c => c.country))).sort();
+    const cities = Array.from(new Set(allConferences.map(c => c.city))).sort();
+    const topics = Array.from(new Set(allConferences.flatMap(c => c.topics))).sort();
+
+    const buildLinks = (items, type) => items.map(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#conferences";
+      a.className = "block text-[13.5px] text-slate-400 hover:text-white py-1.5";
+      a.textContent = item;
+      a.addEventListener("click", (e) => {
+        if (type === "country") $("#f-country").value = item;
+        if (type === "city") $("#f-city").value = item;
+        if (type === "topic") $("#f-keyword").value = item;
+        visibleCount = PAGE_SIZE;
+        applyFilters();
+      });
+      li.appendChild(a);
+      return li;
+    });
+
+    const cList = $("#footerCountries"); cList.innerHTML = ""; buildLinks(countries, "country").forEach(li => cList.appendChild(li));
+    const ciList = $("#footerCities"); ciList.innerHTML = ""; buildLinks(cities, "city").forEach(li => ciList.appendChild(li));
+    const tList = $("#footerTopics"); tList.innerHTML = ""; buildLinks(topics, "topic").forEach(li => tList.appendChild(li));
+  }
+
+  /* ---------------- Filtering / Sorting ---------------- */
+  function applyFilters(){
+    const keyword = $("#f-keyword").value.trim().toLowerCase();
+    const month = $("#f-month").value;
+    const country = $("#f-country").value;
+    const city = $("#f-city").value.trim().toLowerCase();
+
+    activeMonth = month;
+    renderMonthTabs();
+
+    filtered = allConferences.filter(c => {
+      const matchesKeyword = !keyword || [c.title, c.description, c.organizer, c.city, c.country, ...c.topics]
+        .join(" ").toLowerCase().includes(keyword);
+      const matchesMonth = !month || monthKey(c.date) === month;
+      const matchesCountry = !country || c.country === country;
+      const matchesCity = !city || c.city.toLowerCase().includes(city);
+      return matchesKeyword && matchesMonth && matchesCountry && matchesCity;
+    });
+
+    sortResults();
+
+    const hasFilters = !!(keyword || month || country || city);
+    $("#clearFilters").classList.toggle("hidden", !hasFilters);
+
+    renderCards();
+  }
+
+  function sortResults(){
+    if (sortMode === "soonest") {
+      filtered.sort((a,b) => new Date(a.date) - new Date(b.date));
+    } else if (sortMode === "deadline") {
+      filtered.sort((a,b) => new Date(a.deadline) - new Date(b.deadline));
+    } else if (sortMode === "newest") {
+      filtered.sort((a,b) => b.id.localeCompare(a.id));
+    }
+  }
+
+  /* ---------------- Render: cards ---------------- */
+  function cardTemplate(c){
+    const badge = dayBadge(c.date);
+    const dLeft = daysUntil(c.deadline);
+    let status = c.status;
+    if (dLeft >= 0 && dLeft <= 7 && status !== "Indexed Listing") status = "Deadline Soon";
+    const deadlineText = dLeft < 0 ? `Abstract deadline: ${fmtDate(c.deadline)}` :
+      dLeft === 0 ? "Deadline today" : `Deadline in ${dLeft} day${dLeft===1?"":"s"}`;
+
+    const card = document.createElement("div");
+    card.className = "conf-card bg-white border border-slate-200 hover:border-accent rounded-xl p-5 flex flex-col gap-3.5 transition";
+    card.innerHTML = `
+      <div class="flex gap-3.5 items-start">
+        <div class="shrink-0 w-14 h-14 rounded-lg bg-navy text-white flex flex-col items-center justify-center" aria-hidden="true">
+          <div class="font-serif font-bold text-[19px] leading-none">${badge.day}</div>
+          <div class="text-[10.5px] tracking-wide text-blue-300 mt-0.5">${badge.mon}</div>
+        </div>
+        <div>
+          <button type="button" class="detail-trigger text-left font-semibold text-[16px] leading-snug text-navy hover:text-accent" data-id="${c.id}">${escapeHtml(c.title)}</button>
+          <div class="text-[13px] text-slate-500 mt-1.5 flex items-center gap-1.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>${escapeHtml(c.city)}, ${escapeHtml(c.country)}</span>
+          </div>
+        </div>
+      </div>
+      <span class="self-start text-[11.5px] font-semibold px-2.5 py-1 rounded-md ${statusClass(status)}">${escapeHtml(status)}</span>
+      <div class="flex flex-wrap gap-1.5">
+        ${c.topics.map(t => `<span class="text-[11.5px] text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">${escapeHtml(t)}</span>`).join("")}
+      </div>
+      <div class="flex justify-between items-center gap-2 mt-auto pt-3.5 border-t border-slate-100">
+        <span class="text-[12px] text-slate-500 flex items-center gap-1.5">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          ${escapeHtml(deadlineText)}
+        </span>
+        <button type="button" class="detail-trigger text-[13px] font-semibold text-accent hover:text-accentdark flex items-center gap-1 shrink-0" data-id="${c.id}">View Details
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    `;
+    return card;
+  }
+
+  function renderCards(){
+    const grid = $("#cardGrid");
+    grid.innerHTML = "";
+    const toShow = filtered.slice(0, visibleCount);
+    toShow.forEach(c => grid.appendChild(cardTemplate(c)));
+
+    $("#emptyState").classList.toggle("hidden", filtered.length !== 0);
+    grid.classList.toggle("hidden", filtered.length === 0);
+
+    $("#resultCount").textContent = filtered.length === 0
+      ? "No conferences found"
+      : `Showing ${toShow.length} of ${filtered.length} conference${filtered.length===1?"":"s"}`;
+
+    const loadMoreBtn = $("#loadMoreBtn");
+    const allLoaded = $("#allLoadedMsg");
+    if (visibleCount >= filtered.length){
+      loadMoreBtn.classList.add("hidden");
+      allLoaded.classList.toggle("hidden", filtered.length === 0);
+    } else {
+      loadMoreBtn.classList.remove("hidden");
+      allLoaded.classList.add("hidden");
+    }
+
+    $$(".detail-trigger", grid).forEach(btn => {
+      btn.addEventListener("click", () => openDetail(btn.getAttribute("data-id")));
+    });
+  }
+
+  /* ---------------- Modal / Detail view ---------------- */
+  function openDetail(id){
+    const c = allConferences.find(x => x.id === id);
+    if (!c) return;
+
+    document.title = `${c.title} | DPR ResearchHub`;
+    let meta = $('meta[name="description"]');
+    meta.dataset.prev = meta.dataset.prev || meta.content;
+    meta.content = c.description.slice(0,155);
+
+    const dLeft = daysUntil(c.deadline);
+    let status = c.status;
+    if (dLeft >= 0 && dLeft <= 7 && status !== "Indexed Listing") status = "Deadline Soon";
+
+    const body = $("#modalBody");
+    body.innerHTML = `
+      <p class="text-[12px] text-slate-400 mb-2">/conferences/${escapeHtml(c.id)}</p>
+      <h2 id="modalTitle" class="font-serif font-semibold text-[22px] text-navy mb-3">${escapeHtml(c.title)}</h2>
+      <span class="inline-block text-[11.5px] font-semibold px-2.5 py-1 rounded-md ${statusClass(status)} mb-4">${escapeHtml(status)}</span>
+
+      <dl class="grid grid-cols-2 gap-4 text-[13.5px] mb-5">
+        <div><dt class="text-slate-400">Date</dt><dd class="text-navy font-medium">${fmtDate(c.date)}</dd></div>
+        <div><dt class="text-slate-400">Location</dt><dd class="text-navy font-medium">${escapeHtml(c.city)}</dd></div>
+        <div><dt class="text-slate-400">Country</dt><dd class="text-navy font-medium">${escapeHtml(c.country)}</dd></div>
+        <div><dt class="text-slate-400">Organizer</dt><dd class="text-navy font-medium">${escapeHtml(c.organizer || "Not provided")}</dd></div>
+        <div><dt class="text-slate-400">Submission deadline</dt><dd class="text-navy font-medium">${fmtDate(c.deadline)}</dd></div>
+        <div><dt class="text-slate-400">Publication route</dt><dd class="text-navy font-medium">${escapeHtml(c.publication || "Verify with organizer")}</dd></div>
+      </dl>
+
+      <div class="mb-5">
+        <h3 class="text-[12px] font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Topics</h3>
+        <div class="flex flex-wrap gap-1.5">
+          ${c.topics.map(t => `<span class="text-[11.5px] text-slate-600 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">${escapeHtml(t)}</span>`).join("")}
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h3 class="text-[12px] font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Indexing information</h3>
+        <p class="text-[13.5px] text-slate-700">${c.indexing.map(escapeHtml).join(", ")}</p>
+      </div>
+
+      <div class="mb-5">
+        <h3 class="text-[12px] font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Description</h3>
+        <p class="text-[13.5px] text-slate-600 leading-relaxed">${escapeHtml(c.description)}</p>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-[12px] font-semibold text-slate-400 uppercase tracking-wide mb-2">Important dates</h3>
+        <ul class="space-y-1.5">
+          ${c.importantDates.map(d => `<li class="flex justify-between text-[13.5px]"><span class="text-slate-500">${escapeHtml(d.label)}</span><span class="text-navy font-medium">${fmtDate(d.date)}</span></li>`).join("")}
+        </ul>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 text-amber-900 text-[12.5px] rounded-lg p-3.5 leading-relaxed mb-5">
+        Indexing and publication information may be provided by event organizers or available sources. Please verify current Scopus/Web of Science coverage and any payment terms directly with the organizer before submitting.
+      </div>
+
+      ${c.website
+        ? `<a href="${escapeHtml(c.website)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-accent hover:bg-accentdark text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition">Visit Official Conference Website
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+           </a>`
+        : `<p class="text-[13px] text-slate-500 italic">Official website: Not provided</p>`
+      }
+    `;
+
+    const backdrop = $("#modalBackdrop");
+    backdrop.classList.remove("hidden");
+    backdrop.classList.add("flex");
+    document.body.style.overflow = "hidden";
+    lastFocused = document.activeElement;
+    $("#modalClose").focus();
+  }
+
+  let lastFocused = null;
+  function closeModal(){
+    const backdrop = $("#modalBackdrop");
+    backdrop.classList.add("hidden");
+    backdrop.classList.remove("flex");
+    document.body.style.overflow = "";
+    document.title = "DPR ResearchHub | Academic Conferences & Publication Directory";
+    const meta = $('meta[name="description"]');
+    if (meta.dataset.prev) meta.content = meta.dataset.prev;
+    if (lastFocused) lastFocused.focus();
+  }
+
+  $("#modalClose").addEventListener("click", closeModal);
+  $("#modalBackdrop").addEventListener("click", (e) => { if (e.target.id === "modalBackdrop") closeModal(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !$("#modalBackdrop").classList.contains("hidden")) closeModal();
+  });
+  // Basic focus trap
+  $("#modalPanel").addEventListener("keydown", (e) => {
+    if (e.key !== "Tab") return;
+    const focusables = $$('button, a[href], input, textarea, select', $("#modalPanel")).filter(el => el.offsetParent !== null);
+    if (!focusables.length) return;
+    const first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
+
+  /* ---------------- Header search shortcut ---------------- */
+  $("#headerSearchBtn").addEventListener("click", () => {
+    $("#f-keyword").focus();
+    document.getElementById("home").scrollIntoView({ behavior:"smooth" });
+  });
+
+  /* ---------------- Mobile nav ---------------- */
+  const mobileToggle = $("#mobileToggle");
+  const mobileNav = $("#mobileNav");
+  const iconMenu = $("#iconMenu");
+  const iconClose = $("#iconClose");
+
+  function openMobileNav(){
+    mobileNav.classList.remove("hidden");
+    mobileToggle.setAttribute("aria-expanded","true");
+    mobileToggle.setAttribute("aria-label","Close menu");
+    iconMenu.classList.add("hidden");
+    iconClose.classList.remove("hidden");
+  }
+  function closeMobileNav(){
+    mobileNav.classList.add("hidden");
+    mobileToggle.setAttribute("aria-expanded","false");
+    mobileToggle.setAttribute("aria-label","Open menu");
+    iconMenu.classList.remove("hidden");
+    iconClose.classList.add("hidden");
+  }
+  mobileToggle.addEventListener("click", () => {
+    mobileNav.classList.contains("hidden") ? openMobileNav() : closeMobileNav();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !mobileNav.classList.contains("hidden")) closeMobileNav();
+  });
+  document.addEventListener("click", (e) => {
+    if (!mobileNav.classList.contains("hidden") && !mobileNav.contains(e.target) && !mobileToggle.contains(e.target)) closeMobileNav();
+  });
+  $$(".nav-link", mobileNav).forEach(link => link.addEventListener("click", closeMobileNav));
+
+  /* ---------------- Search / filters wiring ---------------- */
+  $("#searchForm").addEventListener("submit", (e) => { e.preventDefault(); visibleCount = PAGE_SIZE; applyFilters(); });
+  $("#f-keyword").addEventListener("input", debounce(() => { visibleCount = PAGE_SIZE; applyFilters(); }, 250));
+  $("#f-month").addEventListener("change", () => { visibleCount = PAGE_SIZE; applyFilters(); });
+  $("#f-country").addEventListener("change", () => { visibleCount = PAGE_SIZE; applyFilters(); });
+  $("#f-city").addEventListener("input", debounce(() => { visibleCount = PAGE_SIZE; applyFilters(); }, 250));
+  $("#sortBy").addEventListener("change", (e) => { sortMode = e.target.value; sortResults(); renderCards(); });
+  $("#clearFilters").addEventListener("click", () => {
+    $("#searchForm").reset();
+    activeMonth = "";
+    visibleCount = PAGE_SIZE;
+    applyFilters();
+  });
+  $("#loadMoreBtn").addEventListener("click", () => {
+    visibleCount += PAGE_SIZE;
+    renderCards();
+  });
+
+  function debounce(fn, wait){
+    let t;
+    return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), wait); };
+  }
+
+  /* ---------------- Form validation helpers ---------------- */
+  function showFieldError(input, msg){
+    const err = input.parentElement.querySelector(".field-error");
+    input.classList.add("border-red-400");
+    input.setAttribute("aria-invalid","true");
+    if (err){ err.textContent = msg; err.classList.remove("hidden"); }
+  }
+  function clearFieldError(input){
+    const err = input.parentElement.querySelector(".field-error");
+    input.classList.remove("border-red-400");
+    input.removeAttribute("aria-invalid");
+    if (err){ err.textContent = ""; err.classList.add("hidden"); }
+  }
+
+  /* ---------------- Submit Event form ---------------- */
+  $("#submitForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
+    const required = [
+      ["#s-organizerName","Organizer name is required."],
+      ["#s-email","A valid email is required."],
+      ["#s-title","Conference title is required."],
+      ["#s-start","Start date is required."],
+      ["#s-country","Country is required."],
+      ["#s-city","City is required."]
+    ];
+    required.forEach(([sel,msg]) => {
+      const el = $(sel);
+      clearFieldError(el);
+      if (!el.value.trim()){ showFieldError(el, msg); valid = false; }
+    });
+    const email = $("#s-email");
+    if (email.value.trim() && !isValidEmail(email.value.trim())){ showFieldError(email, "Enter a valid email address."); valid = false; }
+
+    const website = $("#s-website");
+    clearFieldError(website);
+    if (website.value.trim() && !isValidUrl(website.value.trim())){ showFieldError(website, "Enter a valid URL, including https://."); valid = false; }
+
+    const start = $("#s-start"), end = $("#s-end");
+    clearFieldError(end);
+    if (start.value && end.value && new Date(end.value) < new Date(start.value)){
+      showFieldError(end, "End date cannot be before the start date."); valid = false;
+    }
+
+    if (!valid) return;
+    $("#submitSuccess").classList.remove("hidden");
+    e.target.reset();
+  });
+
+  /* ---------------- Contact form ---------------- */
+  $("#contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
+    [["#c-name","Name is required."],["#c-subject","Subject is required."],["#c-message","Message is required."]].forEach(([sel,msg]) => {
+      const el = $(sel); clearFieldError(el);
+      if (!el.value.trim()){ showFieldError(el, msg); valid = false; }
+    });
+    const email = $("#c-email"); clearFieldError(email);
+    if (!email.value.trim() || !isValidEmail(email.value.trim())){ showFieldError(email, "Enter a valid email address."); valid = false; }
+
+    if (!valid) return;
+    $("#contactSuccess").classList.remove("hidden");
+    e.target.reset();
+  });
+
+  /* ---------------- Newsletter form ---------------- */
+  $("#newsletterForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = $("#nl-email");
+    $("#newsletterSuccess").classList.add("hidden");
+    $("#newsletterError").classList.add("hidden");
+    if (!isValidEmail(email.value.trim())){
+      $("#newsletterError").classList.remove("hidden");
+      return;
+    }
+    $("#newsletterSuccess").classList.remove("hidden");
+    e.target.reset();
+  });
+
+  /* ---------------- Init ---------------- */
+  async function init(){
+    allConferences = await getConferences();
+    filtered = allConferences.slice();
+    populateCountryDropdown();
+    renderFooterLists();
+    renderMonthTabs();
+    sortResults();
+    renderCards();
+  }
+  init();
+
+})();
+</script>
+
+</body>
+</html>
